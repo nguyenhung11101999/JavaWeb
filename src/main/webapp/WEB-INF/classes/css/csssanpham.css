@@ -1,0 +1,95 @@
+/*chitietsanpham*/
+fieldset{
+	width: 410px;
+	margin: auto;
+}
+.contentsp{
+	width: 1200px;
+	background: #ffe7d1;
+	margin: auto;
+	display: flex;
+}
+.leftsp{
+	width: 50%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.rightsp{
+	width: 50%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.boxsp{
+	text-align: center;
+}
+.boxsp img{
+	width: 550px;
+	height: 400px;
+}
+.subsp img{
+	width: 70px;
+	border: 1px solid white;
+}
+.subsp ul{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	}
+.subsp ul li{
+	display: inline;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+.subsp{
+	margin-top: 15px;
+}
+.rightsp > div:first-child{
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	color: #475254;
+	margin-top: 10px;
+}
+.right-contentsp{
+	display: flex;
+	margin-top: 50px;
+}
+.right1sp{
+	width: 50%;
+	display: flex;
+	font-size: 15px;
+	line-height: 25px;
+}
+.right2sp{
+	width: 50%;
+}
+.right1sp > div:first-child{
+	font-weight: bold;
+	width: 40%;
+	padding-left: 10px;
+}
+.right1sp > div:last-child{
+	width: 60%;
+}
+.right2sp fieldset{
+	width: 70%;
+	margin-bottom: 20px;
+}
+legend{
+	font-size: 15px;
+}
+.right-ghsp{
+	margin-top: 100px;
+}
+.right-ghsp button{
+	width: 150px;
+	height: 50px;
+	background: #b88c67;
+	font-weight: bold;
+	margin-left: 430px;
+}
+.right-ghsp button:hover{
+	background: #475254;
+	color: white;
+}
+/*/chitietsanpham*/
