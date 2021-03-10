@@ -1,6 +1,5 @@
-/*
- * package com.devpro.shop14;
- * 
- * public interface Constants { public static String ROOT_UPLOAD_PATH =
- * "E:\\JavaWeb\\com.devpro.shop14\\upload\\"; }
- */
+package com.devpro.shop14;
+
+public interface Constants {
+    public static String ROOT_UPLOAD_PATH = "/home/quangminh/eclipse-workspace/hung/shop12/JavaWeb/upload/";
+}

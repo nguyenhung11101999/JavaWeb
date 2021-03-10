@@ -49,70 +49,64 @@
 										<strong>Thêm Sản phẩm</strong>
 									</div>
 									<div class="card-body card-block">
-										<form action="">
+										<sf:form action="${pageContext.servletContext.contextPath}/addproduct" method = "post"
+										modelAttribute = "product" enctype="multipart/form-data">
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Nhãn hiệu</label>
+													<label class=" form-control-label">Categories:</label>
 												</div>
 												<div class="col-12 col-md-9">
-													<input type="text" id="text-input"
-														name="text-input" placeholder="Text" class="form-control" />
+													<sf:select path = "categories">
+                                                        <sf:options items="${categories}" itemValue="id" itemLabel="name"/>
+													</sf:select>
 												</div>
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Giá</label>
+													<label class=" form-control-label">Tile</label>
 												</div>
 												<div class="col-12 col-md-9">
-													<input type="text" id="text-input"
-														name="text-input" placeholder="Text" class="form-control" />
+													<sf:input path="title" cssClass="form-control" />
 												</div>
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Xuất sứ</label>
+													<label class=" form-control-label">Price</label>
 												</div>
 												<div class="col-12 col-md-9">
-													<input type="text" id="text-input"
-														name="text-input" placeholder="Text" class="form-control" />
+													<sf:input path="price" cssClass="form-control" />
 												</div>
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Kích thước</label>
+													<label class=" form-control-label">Short description</label>
 												</div>
 												<div class="col-12 col-md-9">
-													<select>
-														<option>1</option>
-													</select>
+													<sf:textarea path="short_description" cssClass="form-control"/>
 												</div>
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Kích thước</label>
+													<label class=" form-control-label">Detail description</label>
 												</div>
 												<div class="col-12 col-md-9">
-													<input type="text" id="text-input"
-														name="text-input" placeholder="Text" class="form-control" />
+													<sf:textarea path="detail_description" cssClass="form-control"  />
 												</div>
 											</div>
 											<div class="row form-group">
-												<div class="col col-md-3">
-													<label for="file-multiple-input"
-														class=" form-control-label">File input</label>
-												</div>
-												<div class="col-12 col-md-9">
-													<input type="file" id="file-multiple-input"
-														name="file-multiple-input"
-														class="form-control-file" />
-												</div>
-											</div>
+                                           	    <div class="col col-md-3">
+                                            	    <label class=" form-control-label">Image</label>
+                                                </div>
+                                            	<div class="col-12 col-md-9">
+                                         	        <input type="file" class="form-control-file" name = "productAvatar" />
+                                                </div>
+                                            </div>
 											<div class="card-footer">
 												<button type="submit" class="btn btn-primary btn-sm">
 													<i class="fa fa-dot-circle-o"></i> Submit
 												</button>
 											</div>
-										</form>
+										</sf:form>
 									</div>
 
 								</div>

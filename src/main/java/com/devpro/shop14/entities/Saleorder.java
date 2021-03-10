@@ -38,8 +38,8 @@ public class Saleorder extends BaseEntity {
 	@Column(name = "customer_phone", length = 100, nullable = true)
 	private String customer_phone;
 
-	@Column(name = "cutomer_email", length = 100, nullable = true)
-	private String cutomer_email;
+	@Column(name = "customer_email", length = 100, nullable = true)
+	private String customer_email;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "saleorder", fetch = FetchType.LAZY)
 	private List<SaleorderProducts> saleorderproducts = new ArrayList<SaleorderProducts>();
@@ -118,12 +118,12 @@ public class Saleorder extends BaseEntity {
 		this.customer_phone = customer_phone;
 	}
 
-	public String getCutomer_email() {
-		return cutomer_email;
+	public String getCustomer_email() {
+		return customer_email;
 	}
 
-	public void setCutomer_email(String cutomer_email) {
-		this.cutomer_email = cutomer_email;
+	public void setCustomer_email(String customer_email) {
+		this.customer_email = customer_email;
 	}
 
 }
