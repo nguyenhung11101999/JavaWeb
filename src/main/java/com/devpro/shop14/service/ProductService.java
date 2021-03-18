@@ -22,19 +22,19 @@ import static com.devpro.shop14.Constants.ROOT_UPLOAD_PATH;
 @Service
 public class ProductService implements Constants {
 
-    @Autowired
-    private ProductRepository productsRepository;
+	@Autowired
+	private ProductRepository productsRepository;
 
-    @PersistenceContext
-    EntityManager entityManager;
+	@PersistenceContext
+	EntityManager entityManager;
 
-    /*
-     * kiem tra null cua image
-     *
-     * @param image
-     */
+	/*
+	 * kiem tra null cua image
+	 *
+	 * @param image
+	 */
 
-    private boolean isEmptyUploadFile(MultipartFile[] images) {
+	private boolean isEmptyUploadFile(MultipartFile[] images) {
 		if (images == null || images.length <= 0)
 			return true;
 		if (images.length == 1 && images[0].getOriginalFilename().isEmpty())
@@ -60,8 +60,7 @@ public class ProductService implements Constants {
 					new File(avatarPath).delete();
 				}
 			}
-			
-			
+
 			// kiem tra neu nguoi dung co upload file.
 			if (productAvatar != null && !productAvatar.getOriginalFilename().isEmpty()) {
 				String avatarPath = "/product/avatar/" + productAvatar.getOriginalFilename();
@@ -69,42 +68,45 @@ public class ProductService implements Constants {
 						new File(ROOT_UPLOAD_PATH + "/product//avatar//" + productAvatar.getOriginalFilename()));
 				product.setAvatar(avatarPath);
 			}
-			
-			
 
 			product.setSeo(Utilities.seo(product.getTitle()) + "-" + System.currentTimeMillis());
 			productsRepository.save(product);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
 		}
 	}
 
-    public void delete(Integer id) {
-        System.out.println("===delete:"+id);
-        try {
-            productsRepository.deleteById(id);
-        }catch (Exception e) {
+	public void delete(Integer id) {
+		System.out.println("===delete:" + id);
+		try {
+			productsRepository.deleteById(id);
+		} catch (Exception e) {
 
-            System.out.println("===e:"+e);
-            e.printStackTrace();
+			System.out.println("===e:" + e);
+			e.printStackTrace();
 
-        }
-    }
+		}
+	}
 
-    public List<Product> search(ProductSearch productSearch) {
-        String jpql = "SELECT p FROM Products p where 1=1";
+	public List<Product> search(ProductSearch productSearch) {
+		String jpql = "SELECT p FROM Product p where 1=1";
 
-        if(!StringUtils.isEmpty(productSearch.getSeo())) {
-            jpql = jpql + " AND p.seo = '" + productSearch.getSeo() + "'";
-        }
+		if (!StringUtils.isEmpty(productSearch.getSeo())) {
+			jpql = jpql + " AND p.seo = '" + productSearch.getSeo() + "'";
+		}
 
-        if(!StringUtils.isEmpty(productSearch.getCategorySeo())) {
-            jpql = jpql + " AND p.categories.name = '" + productSearch.getCategorySeo() + "'";
-        }
-
-        Query query = entityManager.createQuery(jpql, Product.class);
-        return query.getResultList();
-    }
+		if (!StringUtils.isEmpty(productSearch.getCategorySeo())) {
+			jpql = jpql + " AND p.categories.seo = '" + productSearch.getCategorySeo() + "'";
+		}
+		
+		if (!StringUtils.isEmpty(productSearch.getSearchText())) {
+			String st = productSearch.getSearchText();
+			jpql = jpql + " AND (p.title like '%" + st + "%')";
+		}
+		
+		Query query = entityManager.createQuery(jpql, Product.class);
+		return query.getResultList();
+	}
 }

@@ -8,13 +8,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import com.devpro.shop14.Constants;
+
 /*import com.devpro.shop14.Constants;*/
 
 
 //la 1 bean ma spring hieu duoc
 //bean nay dung de cau hinh
 @Configuration
-public class MVCConf implements WebMvcConfigurer/* Constants*/{
+public class MVCConf implements WebMvcConfigurer, Constants{
 	/**
 	 * cấu hình các static resources.
 	 */
@@ -24,6 +26,7 @@ public class MVCConf implements WebMvcConfigurer/* Constants*/{
 		registry.addResourceHandler("/js/**").addResourceLocations("classpath:/js/");
 		registry.addResourceHandler("/images/**").addResourceLocations("classpath:/images/");
 		registry.addResourceHandler("/backend/**").addResourceLocations("classpath:/backend/");
+		registry.addResourceHandler("/upload/**").addResourceLocations("file:" + ROOT_UPLOAD_PATH);
 		/*
 		 * registry.addResourceHandler("/upload/**").addResourceLocations("file:" +
 		 * ROOT_UPLOAD_PATH);

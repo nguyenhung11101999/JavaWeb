@@ -10,13 +10,16 @@
 <!-- banner -->
 <div class="banner">
 	<div class="banner-logo">
-		<a href="${pageContext.servletContext.contextPath}/index"><img src="images/banner-logo.jpg"></a>
+		<a href="${pageContext.servletContext.contextPath}/index"><img
+			src="images/banner-logo.jpg"></a>
 	</div>
 	<div class="banner-search">
 		<div>
-			<div class="banner-search1">
-				<input type="text" placeholder="Tìm giày hoặc nhẵn hiệu">
-			</div>
+			<form action="${pageContext.servletContext.contextPath}/searchAll" method = "post">
+				<div class="banner-search1">
+					<input type="text" placeholder="Tìm giày hoặc nhẵn hiệu" name = "searchText">
+				</div>
+			</form>
 			<div class="banner-search2">
 				<a href="#"><img src="images/banner-search.png"></a>
 			</div>
@@ -32,8 +35,8 @@
 	</div>
 	<div class="banner-login">
 		<div>
-			<a href="${pageContext.servletContext.contextPath}/login" target="_blanh">Đăng nhập</a> <br> <a
-				href="">Đăng ký</a>
+			<a href="${pageContext.servletContext.contextPath}/login"
+				target="_blanh">Đăng nhập</a> <br> <a href="">Đăng ký</a>
 		</div>
 	</div>
 </div>
@@ -41,13 +44,23 @@
 <!-- menu-top -->
 <div class="menu-top">
 	<ul>
-		<li><a href="${pageContext.servletContext.contextPath}/danhmuc">DANH MỤC</a></li>
-		<li><a href="${pageContext.servletContext.contextPath}/sanphamkhuyenmai">SẢN PHẨM KHUYẾN MÃI</a></li>
-		<li><a href="${pageContext.servletContext.contextPath}/sanphammoi">SẢN PHẨM MỚI</a></li>
-		<li><a href="${pageContext.servletContext.contextPath}/sanphambanchay">SẢN PHẨM BÁN CHẠY</a></li>
-		<li><a href="${pageContext.servletContext.contextPath}/sanphamthanhly">SẢN PHẨM THANH THANH LÝ</a></li>
+		<li><a href="${pageContext.servletContext.contextPath}/danhmuc">DANH
+				MỤC</a></li>
+		<li><a
+			href="${pageContext.servletContext.contextPath}/sanphamkhuyenmai">SẢN
+				PHẨM KHUYẾN MÃI</a></li>
+		<li><a
+			href="${pageContext.servletContext.contextPath}/sanphammoi">SẢN
+				PHẨM MỚI</a></li>
+		<li><a
+			href="${pageContext.servletContext.contextPath}/sanphambanchay">SẢN
+				PHẨM BÁN CHẠY</a></li>
+		<li><a
+			href="${pageContext.servletContext.contextPath}/sanphamthanhly">SẢN
+				PHẨM THANH THANH LÝ</a></li>
 		<li><a href="${pageContext.servletContext.contextPath}/contact">CONTACT</a></li>
-		<li><a href="${pageContext.servletContext.contextPath}/adminindex">ADMIN</a></li>
+		<li><a
+			href="${pageContext.servletContext.contextPath}/adminindex">ADMIN</a></li>
 	</ul>
 </div>
 <!-- /menu-top -->

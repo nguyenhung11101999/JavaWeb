@@ -2,16 +2,16 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!-- JSTL -->
-<%@ taglib prefix="jstl_core" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>welcome</title>
-	<meta charset="utf-8">
-	<jsp:include page="/WEB-INF/views/front-end/common/css.jsp"></jsp:include>
-	<jsp:include page="/WEB-INF/views/front-end/common/js.jsp"></jsp:include>
+<title>welcome</title>
+<meta charset="utf-8">
+<jsp:include page="/WEB-INF/views/front-end/common/css.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/views/front-end/common/js.jsp"></jsp:include>
 
 </head>
 <body>
@@ -28,1156 +28,78 @@
 					<div>
 						<div>
 							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
+								<c:forEach items="${products}" var="products">
+									<div>
+										<a href="${pageContext.servletContext.contextPath}/detail"><img
+											src="${pageContext.servletContext.contextPath}/upload/${products.avatar}"></a>
+										<div class="main-p">${products.title}</div>
+										<div class="main-p">${products.price}</div>
+										<div class="main-ul">
+											<ul>
+												<li><a href="#">Mua hàng</a></li>
+												<li><a href="#">Đánh giá</a></li>
+												<li><a
+													href="${pageContext.servletContext.contextPath}/detail"
+													target="_blanh">Chi tiết</a></li>
+											</ul>
+										</div>
 									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
+								</c:forEach>
 							</div>
 							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
+								<c:forEach items="${products}" var="products">
+									<div>
+										<a href="${pageContext.servletContext.contextPath}/detail"><img
+											src="${pageContext.servletContext.contextPath}/upload/${products.avatar}"></a>
+										<div class="main-p">${products.title}</div>
+										<div class="main-p">${products.price}</div>
+										<div class="main-ul">
+											<ul>
+												<li><a href="#">Mua hàng</a></li>
+												<li><a href="#">Đánh giá</a></li>
+												<li><a
+													href="${pageContext.servletContext.contextPath}/detail"
+													target="_blanh">Chi tiết</a></li>
+											</ul>
+										</div>
 									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
+								</c:forEach>
 							</div>
 						</div>
 						<div class="content-enddm">
 							<div>
-								<div><a href="#">&lt;</a></div>
-								<div><a href="#">1</a></div>
-								<div><a href="#">2</a></div>
-								<div><a href="#">3</a></div>
-								<div><a href="#">4</a></div>
-								<div><a href="#">5</a></div>
-								<div><a href="#">&gt;</a></div>
+								<div>
+									<a href="#">&lt;</a>
+								</div>
+								<div>
+									<a href="#">1</a>
+								</div>
+								<div>
+									<a href="#">2</a>
+								</div>
+								<div>
+									<a href="#">3</a>
+								</div>
+								<div>
+									<a href="#">4</a>
+								</div>
+								<div>
+									<a href="#">5</a>
+								</div>
+								<div>
+									<a href="#">&gt;</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- /nam -->
-				<!-- nu -->
-				<div class="main-nudm" id="nu">
-					<div class="list-title-header">SAMSUNG</div>
-					<div>
-						<div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content-enddm">
-							<div>
-								<div><a href="#">&lt;</a></div>
-								<div><a href="#">1</a></div>
-								<div><a href="#">2</a></div>
-								<div><a href="#">3</a></div>
-								<div><a href="#">4</a></div>
-								<div><a href="#">5</a></div>
-								<div><a href="#">&gt;</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /nu -->
-				<!-- DOI -->
-				<div class="main-nudm" id="doi">
-					<div class="list-title-header">SONY</div>
-					<div>
-						<div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content-enddm">
-							<div>
-								<div><a href="#">&lt;</a></div>
-								<div><a href="#">1</a></div>
-								<div><a href="#">2</a></div>
-								<div><a href="#">3</a></div>
-								<div><a href="#">4</a></div>
-								<div><a href="#">5</a></div>
-								<div><a href="#">&gt;</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /doi -->
-				<!-- adidas -->
-				<div class="main-nudm" id="adidas">
-					<div class="list-title-header">NOKIA</div>
-					<div>
-						<div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content-enddm">
-							<div>
-								<div><a href="#">&lt;</a></div>
-								<div><a href="#">1</a></div>
-								<div><a href="#">2</a></div>
-								<div><a href="#">3</a></div>
-								<div><a href="#">4</a></div>
-								<div><a href="#">5</a></div>
-								<div><a href="#">&gt;</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /adidas -->
-				<!-- nike -->
-				<div class="main-nudm" id="nike">
-					<div class="list-title-header">LG</div>
-					<div>
-						<div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content-enddm">
-							<div>
-								<div><a href="#">&lt;</a></div>
-								<div><a href="#">1</a></div>
-								<div><a href="#">2</a></div>
-								<div><a href="#">3</a></div>
-								<div><a href="#">4</a></div>
-								<div><a href="#">5</a></div>
-								<div><a href="#">&gt;</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /nike -->
-				<!-- vans -->
-				<div class="main-nudm" id="vans">
-					<div class="list-title-header">XIAOMI</div>
-					<div>
-						<div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content-enddm">
-							<div>
-								<div><a href="#">&lt;</a></div>
-								<div><a href="#">1</a></div>
-								<div><a href="#">2</a></div>
-								<div><a href="#">3</a></div>
-								<div><a href="#">4</a></div>
-								<div><a href="#">5</a></div>
-								<div><a href="#">&gt;</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /vans -->
-				<!-- mcqueen -->
-				<div class="main-nudm" id="mcqueen">
-					<div class="list-title-header">VIVO</div>
-					<div>
-						<div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content-enddm">
-							<div>
-								<div><a href="#">&lt;</a></div>
-								<div><a href="#">1</a></div>
-								<div><a href="#">2</a></div>
-								<div><a href="#">3</a></div>
-								<div><a href="#">4</a></div>
-								<div><a href="#">5</a></div>
-								<div><a href="#">&gt;</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /mcqueen -->
-				<!-- converse -->
-				<div class="main-nudm" id="converse">
-					<div class="list-title-header">OPPO</div>
-					<div>
-						<div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="main-contentdm">
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<img src="images/sp.jpg">
-									<div class="main-pdm">Doctor Martens</div>
-									<div class="main-pdm">1.200.000</div>
-									<div class="main-uldm">
-										<ul>
-											<li><a href="#">Mua hàng</a></li>
-											<li><a href="#">Đánh giá</a></li>
-											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content-enddm">
-							<div>
-								<div><a href="#">&lt;</a></div>
-								<div><a href="#">1</a></div>
-								<div><a href="#">2</a></div>
-								<div><a href="#">3</a></div>
-								<div><a href="#">4</a></div>
-								<div><a href="#">5</a></div>
-								<div><a href="#">&gt;</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /converse -->
 			</div>
 		</div>
-		<!-- /content -->
-		<jsp:include page="/WEB-INF/views/front-end/common/footer.jsp"></jsp:include>
+		<!-- /converse -->
+	</div>
+	</div>
+	<!-- /content -->
+	<jsp:include page="/WEB-INF/views/front-end/common/footer.jsp"></jsp:include>
 	</div>
 	<!-- /wrapper -->
 	<!-- js -->
@@ -1190,33 +112,33 @@
 			var key = 0;
 			$(".next").click(function() {
 				$("#imgSlide").fadeOut(function() {
-					$("#imgSlide").attr("src",slide[key]);
+					$("#imgSlide").attr("src", slide[key]);
 					$("#imgSlide").fadeIn();
 					key++;
-					if(key == slide.length)
-						key=0;
+					if (key == slide.length)
+						key = 0;
 				});
 			});
 			$(".prev").click(function() {
 				$("#imgSlide").fadeOut(function() {
-					if(key == 0)
-						key=slide.length - 1;
-					$("#imgSlide").attr("src",slide[key]);
+					if (key == 0)
+						key = slide.length - 1;
+					$("#imgSlide").attr("src", slide[key]);
 					$("#imgSlide").fadeIn();
 					key--;
 				});
 			});
-		// setInterval(function() {
-		// 	$("#imgSlide").fadeOut(function() {
-		// 		$("#imgSlide").attr("src",slide[key]);
-		// 		$("#imgSlide").fadeIn();
-		// 		key++;
-		// 		if(key == slide.length)
-		// 			key = 0;
-		// 	});
-		// },3000);
-	});
-</script>
-<!-- /js -->
+			// setInterval(function() {
+			// 	$("#imgSlide").fadeOut(function() {
+			// 		$("#imgSlide").attr("src",slide[key]);
+			// 		$("#imgSlide").fadeIn();
+			// 		key++;
+			// 		if(key == slide.length)
+			// 			key = 0;
+			// 	});
+			// },3000);
+		});
+	</script>
+	<!-- /js -->
 </body>
 </html>
