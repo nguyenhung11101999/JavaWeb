@@ -35,48 +35,51 @@ public class ProductService implements Constants {
      */
 
     private boolean isEmptyUploadFile(MultipartFile[] images) {
-        if (images == null || images.length <= 0)
-            return true;
-        if (images.length == 1 && images[0].getOriginalFilename().isEmpty())
-            return true;
-        return false;
-    }
+		if (images == null || images.length <= 0)
+			return true;
+		if (images.length == 1 && images[0].getOriginalFilename().isEmpty())
+			return true;
+		return false;
+	}
 
-    private boolean isEmptyUploadFile(MultipartFile image) {
-        return image == null || image.getOriginalFilename().isEmpty();
-    }
+	private boolean isEmptyUploadFile(MultipartFile image) {
+		return image == null || image.getOriginalFilename().isEmpty();
+	}
 
-    @Transactional(rollbackOn = Exception.class)
-    public void saveOrUpdate(Product product, MultipartFile productAvatar) throws Exception {
-        try {
-            System.out.println("product id update: " + product.getId());
-            // truong hop la chinh sua
+	@Transactional(rollbackOn = Exception.class)
+	public void saveOrUpdate(Product product, MultipartFile productAvatar) throws Exception {
+		try {
+			System.out.println("product id update: " + product.getId());
+			// truong hop la chinh sua
 
-            if(product.getId() > 0 && product.getId() != null) {
-                Product productIdDB = productsRepository.findById(product.getId()).get();
-                System.out.println("product id update: " + productIdDB.getId());
-                // neu upload lai anh thi phai xoa anh cu di
-                if(!isEmptyUploadFile(productAvatar)) {
-                    String avatarPath = ROOT_UPLOAD_PATH + productIdDB.getAvatar();
-                    new File(avatarPath).delete();
-                }
-            }
+			if (product.getId() != null && product.getId() > 0) {
+				Product productIdDB = productsRepository.findById(product.getId()).get();
+				// neu upload lai anh thi phai xoa anh cu di
+				if (!isEmptyUploadFile(productAvatar)) {
+					String avatarPath = ROOT_UPLOAD_PATH + productIdDB.getAvatar();
+					new File(avatarPath).delete();
+				}
+			}
+			
+			
+			// kiem tra neu nguoi dung co upload file.
+			if (productAvatar != null && !productAvatar.getOriginalFilename().isEmpty()) {
+				String avatarPath = "/product/avatar/" + productAvatar.getOriginalFilename();
+				productAvatar.transferTo(
+						new File(ROOT_UPLOAD_PATH + "/product//avatar//" + productAvatar.getOriginalFilename()));
+				product.setAvatar(avatarPath);
+			}
+			
+			
 
-            // kiem tra neu nguoi dung co upload file.
-            if(productAvatar != null && !productAvatar.getOriginalFilename().isEmpty()) {
-                String avatarPath = "/product/avatar/" + productAvatar.getOriginalFilename();
-                productAvatar.transferTo(new File(ROOT_UPLOAD_PATH + "/product//avatar//" + productAvatar.getOriginalFilename()));
-                product.setAvatar(avatarPath);
-            }
-
-            product.setSeo(Utilities.seo(product.getTitle()) + "-" +System.currentTimeMillis());
-            productsRepository.save(product);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw e;
-        }
-    }
+			product.setSeo(Utilities.seo(product.getTitle()) + "-" + System.currentTimeMillis());
+			productsRepository.save(product);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
 
     public void delete(Integer id) {
         System.out.println("===delete:"+id);

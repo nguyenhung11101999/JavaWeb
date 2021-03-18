@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!-- JSTL -->
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!-- SPRING FORM -->
@@ -44,9 +44,10 @@
 				<h3 class="title-5 m-b-35">Danh sách sản phẩm</h3>
 				<div class="table-data__tool">
 					<div class="table-data__tool-right">
-						<button class="au-btn au-btn-icon au-btn--green au-btn--small">
-							<i class="zmdi zmdi-plus"></i>add item
-						</button>
+						<a href="${pageContext.servletContext.contextPath}/forms"><button
+								class="au-btn au-btn-icon au-btn--green au-btn--small">
+								<i class="zmdi zmdi-plus"></i>add item
+							</button></a>
 					</div>
 				</div>
 				<div class="table-responsive table-responsive-data2">
@@ -64,29 +65,36 @@
 							</tr>
 						</thead>
 						<tbody>
-						<c:forEach items = "${product}" var = "product">
-						    <tr class="tr-shadow">
-                            	<td><label class="au-checkbox"> <input
-                            										type="checkbox"> <span class="au-checkmark"></span>
-                            	</label></td>
-                            	<td>${product.title}</td>
-                            	<td><span class="block-email">${product.price}</span></td>
-                            	<td class="desc">${product.short_description}</td>
-                            	<td><span class="status--process">${product.status}</span></td>
-                            	<td>
-                            		<div class="table-data-feature">
-                            			<button class="item" data-toggle="tooltip"
-                            				data-placement="top" title="Edit">
-                            				<i class="zmdi zmdi-edit"></i>
-                            			</button>
-                            			<button class="item" data-toggle="tooltip"
-                            				data-placement="top" title="Delete">
-                            				<i class="zmdi zmdi-delete"></i>
-                            			</button>
-                            		</div>
-                            	</td>
-                            </tr>
-						</c:forEach>
+							<c:forEach items="${product}" var="product">
+								<tr class="tr-shadow">
+									<td><label class="au-checkbox"> <input
+											type="checkbox"> <span class="au-checkmark"></span>
+									</label></td>
+									<td>${product.title}</td>
+									<td><span class="block-email">${product.price}</span></td>
+									<td class="desc">${product.short_description}</td>
+									<td><span class="status--process">${product.status}</span></td>
+									<td>
+										<div class="table-data-feature">
+											<a
+												href="${pageContext.servletContext.contextPath}/editproduct/${product.id}"><button
+													class="item" data-toggle="tooltip" data-placement="top"
+													title="Edit">
+													<i class="zmdi zmdi-edit"></i>
+												</button></a>
+											<form
+												action="${pageContext.servletContext.contextPath}/deleteproduct?id=
+												${product.id}"
+												method="post">
+												<button class="item" data-toggle="tooltip"
+													data-placement="top" title="Delete">
+													<i class="zmdi zmdi-delete"></i>
+												</button>
+											</form>
+										</div>
+									</td>
+								</tr>
+							</c:forEach>
 
 						</tbody>
 					</table>

@@ -49,15 +49,19 @@
 										<strong>Thêm Sản phẩm</strong>
 									</div>
 									<div class="card-body card-block">
-										<sf:form action="${pageContext.servletContext.contextPath}/addproduct" method = "post"
-										modelAttribute = "product" enctype="multipart/form-data">
+										<sf:form
+											action="${pageContext.servletContext.contextPath}/addproduct"
+											method="post" modelAttribute="product"
+											enctype="multipart/form-data">
+											
 											<div class="row form-group">
 												<div class="col col-md-3">
 													<label class=" form-control-label">Categories:</label>
 												</div>
 												<div class="col-12 col-md-9">
-													<sf:select path = "categories">
-                                                        <sf:options items="${categories}" itemValue="id" itemLabel="name"/>
+													<sf:select path="categories">
+														<sf:options items="${categories}" itemValue="id"
+															itemLabel="name" />
 													</sf:select>
 												</div>
 											</div>
@@ -79,28 +83,33 @@
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Short description</label>
+													<label class=" form-control-label">Short
+														description</label>
 												</div>
 												<div class="col-12 col-md-9">
-													<sf:textarea path="short_description" cssClass="form-control"/>
+													<sf:textarea path="short_description"
+														cssClass="form-control" />
 												</div>
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Detail description</label>
+													<label class=" form-control-label">Detail
+														description</label>
 												</div>
 												<div class="col-12 col-md-9">
-													<sf:textarea path="detail_description" cssClass="form-control"  />
+													<sf:textarea path="detail_description"
+														cssClass="form-control" />
 												</div>
 											</div>
 											<div class="row form-group">
-                                           	    <div class="col col-md-3">
-                                            	    <label class=" form-control-label">Image</label>
-                                                </div>
-                                            	<div class="col-12 col-md-9">
-                                         	        <input type="file" class="form-control-file" name = "productAvatar" />
-                                                </div>
-                                            </div>
+												<div class="col col-md-3">
+													<label class=" form-control-label">Image</label>
+												</div>
+												<div class="col-12 col-md-9">
+													<input type="file" class="form-control-file"
+														name="productAvatar" />
+												</div>
+											</div>
 											<div class="card-footer">
 												<button type="submit" class="btn btn-primary btn-sm">
 													<i class="fa fa-dot-circle-o"></i> Submit

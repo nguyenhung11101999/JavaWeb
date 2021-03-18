@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 /*import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;*/
 
+import com.devpro.shop14.entities.Categories;
 import com.devpro.shop14.entities.Product;
 import com.devpro.shop14.repository.CategoryRepository;
 import com.devpro.shop14.repository.ProductRepository;
@@ -31,13 +33,12 @@ public class AdminController {
 	 */
 	@Autowired
 	private CategoryRepository categoryrepo;
-	
 
-	@Autowired private ProductRepository productRepo;
+	@Autowired
+	private ProductRepository productRepo;
 
 	@Autowired
 	private ProductService productService;
-
 
 	@RequestMapping(value = { "/adminindex" }, method = RequestMethod.GET)
 	public String adminindex(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
@@ -49,28 +50,61 @@ public class AdminController {
 	@RequestMapping(value = { "/forms" }, method = RequestMethod.GET)
 	public String forms(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
 			throws Exception {
-		model.addAttribute("product",new Product());
-		model.addAttribute("categories",categoryrepo.findAll());
+		model.addAttribute("product", new Product());
+		model.addAttribute("categories", categoryrepo.findAll());
 		return "back-end/forms";
 	}
 
+	// submit information about product when user input data
 	@RequestMapping(value = { "/addproduct" }, method = RequestMethod.POST)
-	public String addProduct(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response
-			,@ModelAttribute("product") Product product, @RequestParam("productAvatar")MultipartFile productAvatar)
+	public String addProduct(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response,
+			@ModelAttribute("product") Product product, @RequestParam("productAvatar") MultipartFile productAvatar)
 			throws Exception {
+		System.out.println("image : " + productAvatar.getOriginalFilename());
 		productService.saveOrUpdate(product, productAvatar);
 		return "redirect:/forms";
 	}
-	
+
 	@RequestMapping(value = { "/table" }, method = RequestMethod.GET)
 	public String table(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
 			throws Exception {
-		model.addAttribute("product",new Product());
+		model.addAttribute("product", new Product());
 		model.addAttribute("product", productRepo.findAll());
 		return "back-end/table";
 	}
 
+	@RequestMapping(value = { "/editproduct/{id}" }, method = RequestMethod.GET)
+	public String editProduct_Get(final ModelMap model, final HttpServletRequest request,
+			final HttpServletResponse response, @PathVariable("id") int productId) throws Exception {
+		model.addAttribute("product", productRepo.findById(productId).get());
+		System.out.println("product id:" + productId);
+		Categories categories = productRepo.findById(productId).get().getCategories();
+		// log kiem tra name categories
+		System.out.println("name of categories :" + categories.getName());
+		/////
+		model.addAttribute("name", productRepo.findById(productId).get().getCategories());
+		model.addAttribute("categories", categoryrepo.findAll());
+		return "back-end/forms1";
+	}
 	
+	@RequestMapping(value = { "/editproduct" }, method = RequestMethod.POST)
+	public String editProduct(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response,
+			@ModelAttribute("product") Product product, @RequestParam("productAvatar") MultipartFile productAvatar)
+			throws Exception {
+		System.out.println("image : " + productAvatar.getOriginalFilename());
+		productService.saveOrUpdate(product, productAvatar);
+		return "redirect:/table";
+	}
+
+	@RequestMapping(value = { "/deleteproduct" }, method = RequestMethod.POST)
+	public String deleteProduct(final ModelMap model, final HttpServletRequest request,
+			final HttpServletResponse response) throws Exception {
+		int id = Integer.parseInt(request.getParameter("id"));
+		System.out.println("id for delete:" + id);
+		productService.delete(id);
+		return "redirect:/table";
+	}
+
 	/*
 	 * @RequestMapping(value = { "/forms1" }, method = RequestMethod.POST) public
 	 * String forms_post(final ModelMap model, final HttpServletRequest request,

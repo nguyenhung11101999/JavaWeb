@@ -47,6 +47,7 @@
 		<li><a href="${pageContext.servletContext.contextPath}/sanphambanchay">SẢN PHẨM BÁN CHẠY</a></li>
 		<li><a href="${pageContext.servletContext.contextPath}/sanphamthanhly">SẢN PHẨM THANH THANH LÝ</a></li>
 		<li><a href="${pageContext.servletContext.contextPath}/contact">CONTACT</a></li>
+		<li><a href="${pageContext.servletContext.contextPath}/adminindex">ADMIN</a></li>
 	</ul>
 </div>
 <!-- /menu-top -->
