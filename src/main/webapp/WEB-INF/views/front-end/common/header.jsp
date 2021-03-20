@@ -1,4 +1,4 @@
-<!-- sử dụng tiếng việt -->
+jhn<!-- sử dụng tiếng việt -->
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!-- JSTL -->
@@ -15,9 +15,11 @@
 	</div>
 	<div class="banner-search">
 		<div>
-			<form action="${pageContext.servletContext.contextPath}/searchAll" method = "post">
+			<form action="${pageContext.servletContext.contextPath}/searchAll"
+				method="post">
 				<div class="banner-search1">
-					<input type="text" placeholder="Tìm giày hoặc nhẵn hiệu" name = "searchText">
+					<input type="text" placeholder="Tìm giày hoặc nhẵn hiệu"
+						name="searchText">
 				</div>
 			</form>
 			<div class="banner-search2">
@@ -30,13 +32,14 @@
 	</div>
 	<div class="banner-cart">
 		<div>
-			<a href=""><img src="images/cart.png"></a>
+			<span id="totalItemsInCart">${totalItem}</span> <a
+				href="${base}/cart"><img src="images/cart.png"></a>
 		</div>
 	</div>
 	<div class="banner-login">
 		<div>
-			<a href="${pageContext.servletContext.contextPath}/login"
-				target="_blanh">Đăng nhập</a> <br> <a href="">Đăng ký</a>
+			<a href="/login"
+				target="_blanh">Đăng nhập</a> <br> <a href="">Đăng ký</a> <br> <a href="/logout">Đăng xuất</a>
 		</div>
 	</div>
 </div>

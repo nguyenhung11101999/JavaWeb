@@ -45,7 +45,12 @@ public class HomeController {
 	public String index(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
 			throws Exception {
 		model.addAttribute("products", new Product());
+		ProductSearch productSearch = new ProductSearch();
 		model.addAttribute("products",productRepository.findAll());
+		productSearch.buildPaging(request);
+		List<Product> products = productService.search(productSearch);
+		model.addAttribute("products",products);
+		model.addAttribute("productSearch", productSearch);
 //		System.out.println("product image src : " + productRepository.findAll().get(4).getAvatar());
 		return "front-end/index";
 
@@ -60,6 +65,9 @@ public class HomeController {
 	@RequestMapping(value = { "/detail"}, method = RequestMethod.GET)
 	public String detail(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
 			throws Exception {
+		int id = Integer.parseInt(request.getParameter("id"));
+		System.out.println("id = : " + id);
+		model.addAttribute("product",productRepository.getOne(id));
 		return "front-end/detail";
 		
 	}
@@ -123,12 +131,10 @@ public class HomeController {
 			throws Exception {
 		String searchText = request.getParameter("searchText");
 		ProductSearch productSearch = new ProductSearch();
+		productSearch.buildPaging(request);
 		
 		productSearch.setSearchText(searchText);
 		List<Product> products = productService.search(productSearch);
-		for(Product temp : products) {
-			System.out.println("cate name : " + temp.getCategories().getName());
-		}
 		model.addAttribute("products",products);
 		
 		model.addAttribute("categories",categoryRepository.findAll());
@@ -146,9 +152,12 @@ public class HomeController {
 	@RequestMapping(value = { "/danhmuc" }, method = RequestMethod.GET)
 	public String danhmuc(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
 			throws Exception {
-		model.addAttribute("products", new Product());
+		ProductSearch productSearch = new ProductSearch();
 		model.addAttribute("products",productRepository.findAll());
-		
+		productSearch.buildPaging(request);
+		List<Product> products = productService.search(productSearch);
+		model.addAttribute("products",products);
+		model.addAttribute("productSearch", productSearch);
 		model.addAttribute("categories",categoryRepository.findAll());
 		return "front-end/danhmuc";
 		
@@ -159,15 +168,15 @@ public class HomeController {
 			throws Exception {
 		String categorySeo = request.getParameter("seo");
 		ProductSearch productSearch = new ProductSearch();
-		System.out.println("cate seo : " + categorySeo);
+		productSearch.buildPaging(request);
 		productSearch.setCategorySeo(categorySeo);
+		//
+		System.out.println("offset:" + productSearch.getOffset());
+		System.out.println("count:" + productSearch.getCount());
+		//
 		List<Product> products = productService.search(productSearch);
-		System.out.println("size of product: " + products.size());
-		for(Product temp : products) {
-			System.out.println("cate name : " + temp.getCategories().getName());
-		}
 		model.addAttribute("products",products);
-		
+		model.addAttribute("productSearch", productSearch);
 		model.addAttribute("categories",categoryRepository.findAll());
 		return "front-end/danhmuc";
 		

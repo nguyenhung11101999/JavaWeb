@@ -1,6 +1,7 @@
 
 package com.devpro.shop14.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,42 +13,39 @@ import javax.persistence.Table;
 
 @Table(name = "tbl_saleorder_products")
 public class SaleorderProducts extends BaseEntity {
-
-	@Column(name = "product_id", nullable = false)
-	private Integer product_id;
-
 	@Column(name = "quality", nullable = false)
-	private Integer quality;
+	private int quality;
 
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name = "saleorder_id", nullable = false)
+	private Saleorder saleOrder;
 
-	@JoinColumn(name = "saleorder_id")
-	private Saleorder saleorder;
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name = "product_id", nullable = false)
+	private Product productsForSale;
 
-	public Saleorder getSaleorder() {
-		return saleorder;
-	}
-
-	public void setSaleorder(Saleorder saleorder) {
-		this.saleorder = saleorder;
-	}
-
-	public Integer getProduct_id() {
-		return product_id;
-	}
-
-	public void setProduct_id(Integer product_id) {
-		this.product_id = product_id;
-	}
-
-	public Integer getQuality() {
+	public int getQuality() {
 		return quality;
 	}
 
-	public void setQuality(Integer quality) {
+	public void setQuality(int quality) {
 		this.quality = quality;
 	}
 
-	
+	public Saleorder getSaleOrder() {
+		return saleOrder;
+	}
+
+	public void setSaleOrder(Saleorder saleOrder) {
+		this.saleOrder = saleOrder;
+	}
+
+	public Product getProductsForSale() {
+		return productsForSale;
+	}
+
+	public void setProductsForSale(Product productsForSale) {
+		this.productsForSale = productsForSale;
+	}
 
 }

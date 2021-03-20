@@ -83,3 +83,4 @@
 			// },3000);
 		});
 	</script>
+	<script src="${base}/js/cart.js"></script>

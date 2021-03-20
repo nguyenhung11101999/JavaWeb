@@ -3,6 +3,7 @@ package com.devpro.shop14.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.devpro.shop14.service.CategoryService;
 import com.devpro.shop14.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,6 +41,9 @@ public class AdminController {
 	@Autowired
 	private ProductService productService;
 
+	@Autowired
+	private CategoryService categoryService;
+	
 	@RequestMapping(value = { "/adminindex" }, method = RequestMethod.GET)
 	public String adminindex(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
 			throws Exception {
@@ -103,6 +107,47 @@ public class AdminController {
 		System.out.println("id for delete:" + id);
 		productService.delete(id);
 		return "redirect:/table";
+	}
+	
+	@RequestMapping(value = { "/forms2" }, method = RequestMethod.GET)
+	public String forms2(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
+			throws Exception {
+		model.addAttribute("category", new Categories());
+		model.addAttribute("categories", categoryrepo.findAll());
+		return "back-end/forms2";
+	}
+	
+	@RequestMapping(value = { "/addcategory" }, method = RequestMethod.POST)
+	public String addCategory(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response,
+			@ModelAttribute("category") Categories categories)
+			throws Exception {
+		System.out.println("category name : " + categories.getName());
+		System.out.println("description : " + categories.getDescription());
+		categoryService.saveOrUpdate(categories);
+		return "redirect:/forms2";
+	}
+	
+	@RequestMapping(value = { "/editcategory/{id}" }, method = RequestMethod.GET)
+	public String editCategory_Get(final ModelMap model, final HttpServletRequest request,
+			final HttpServletResponse response, @PathVariable("id") int categoryId) throws Exception {
+		model.addAttribute("category", categoryrepo.findById(categoryId).get());
+		return "back-end/forms2";
+	}
+	
+	@RequestMapping(value = { "/editcategory" }, method = RequestMethod.GET)
+	public String editCategory_Get(final ModelMap model, final HttpServletRequest request,
+			final HttpServletResponse response, @ModelAttribute("category") Categories catetory) throws Exception {
+		categoryService.saveOrUpdate(catetory);
+		return "back-end/forms2";
+	}
+	
+	@RequestMapping(value = { "/deletecategory" }, method = RequestMethod.POST)
+	public String deleteCategory(final ModelMap model, final HttpServletRequest request,
+			final HttpServletResponse response) throws Exception {
+		int id = Integer.parseInt(request.getParameter("id"));
+		System.out.println("id for delete:" + id);
+		categoryService.delete(id);
+		return "redirect:/table2";
 	}
 
 	/*

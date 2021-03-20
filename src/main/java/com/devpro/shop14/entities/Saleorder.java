@@ -9,6 +9,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -20,8 +22,9 @@ public class Saleorder extends BaseEntity {
 	@Column(name = "code", length = 100, nullable = false)
 	private String code;
 
-	@Column(name = "user_id", nullable = true)
-	private Integer user_id;
+	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@JoinColumn(name = "user_id", nullable = true)
+	private Users users;
 
 	@Column(name = "total", precision = 13, scale = 2, nullable = true)
 	private BigDecimal total;
@@ -41,17 +44,17 @@ public class Saleorder extends BaseEntity {
 	@Column(name = "customer_email", length = 100, nullable = true)
 	private String customer_email;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "saleorder", fetch = FetchType.LAZY)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "saleOrder", fetch = FetchType.LAZY)
 	private List<SaleorderProducts> saleorderproducts = new ArrayList<SaleorderProducts>();
 
 	public void addProduct(SaleorderProducts saleorderproduct) {
 		saleorderproducts.add(saleorderproduct);
-		saleorderproduct.setSaleorder(this);
+		saleorderproduct.setSaleOrder(this);
 	}
 
 	public void removeProduct(SaleorderProducts saleorderproduct) {
 		saleorderproducts.remove(saleorderproduct);
-		saleorderproduct.setSaleorder(null);
+		saleorderproduct.setSaleOrder(null);
 	}
 
 	public List<SaleorderProducts> getSaleorderproducts() {
@@ -70,12 +73,12 @@ public class Saleorder extends BaseEntity {
 		this.code = code;
 	}
 
-	public int getUser_id() {
-		return user_id;
+	public Users getUsers() {
+		return users;
 	}
 
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+	public void setUsers(Users users) {
+		this.users = users;
 	}
 
 	public BigDecimal getTotal() {

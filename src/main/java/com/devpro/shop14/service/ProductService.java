@@ -5,6 +5,8 @@ import com.devpro.shop14.Utilities;
 import com.devpro.shop14.dto.ProductSearch;
 import com.devpro.shop14.entities.Product;
 import com.devpro.shop14.repository.ProductRepository;
+import com.devpro.shop14.taglibs.PaginationTaglib;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -17,7 +19,6 @@ import javax.transaction.Transactional;
 import java.io.File;
 import java.util.List;
 
-import static com.devpro.shop14.Constants.ROOT_UPLOAD_PATH;
 
 @Service
 public class ProductService implements Constants {
@@ -107,6 +108,12 @@ public class ProductService implements Constants {
 		}
 		
 		Query query = entityManager.createQuery(jpql, Product.class);
+		
+		if(productSearch.getOffset() != null) {
+			productSearch.setCount(query.getResultList().size());
+			query.setFirstResult(productSearch.getOffset());
+			query.setMaxResults(PaginationTaglib.MAX);
+		}
 		return query.getResultList();
 	}
 }

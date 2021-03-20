@@ -5,6 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="tag" uri="/WEB-INF/taglibs/pagingTagLibs.tld"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,49 +47,11 @@
 									</div>
 								</c:forEach>
 							</div>
-							<div class="main-contentdm">
-								<c:forEach items="${products}" var="products">
-									<div>
-										<a href="${pageContext.servletContext.contextPath}/detail"><img
-											src="${pageContext.servletContext.contextPath}/upload/${products.avatar}"></a>
-										<div class="main-p">${products.title}</div>
-										<div class="main-p">${products.price}</div>
-										<div class="main-ul">
-											<ul>
-												<li><a href="#">Mua hàng</a></li>
-												<li><a href="#">Đánh giá</a></li>
-												<li><a
-													href="${pageContext.servletContext.contextPath}/detail"
-													target="_blanh">Chi tiết</a></li>
-											</ul>
-										</div>
-									</div>
-								</c:forEach>
-							</div>
 						</div>
 						<div class="content-enddm">
-							<div>
-								<div>
-									<a href="#">&lt;</a>
-								</div>
-								<div>
-									<a href="#">1</a>
-								</div>
-								<div>
-									<a href="#">2</a>
-								</div>
-								<div>
-									<a href="#">3</a>
-								</div>
-								<div>
-									<a href="#">4</a>
-								</div>
-								<div>
-									<a href="#">5</a>
-								</div>
-								<div>
-									<a href="#">&gt;</a>
-								</div>
+							<div class="col-lg-9 d-flex justify-content-center round">
+								<tag:paginate offset="${productSearch.offset}"
+									count="${productSearch.count}" uri="${pageUrl}" />
 							</div>
 						</div>
 					</div>

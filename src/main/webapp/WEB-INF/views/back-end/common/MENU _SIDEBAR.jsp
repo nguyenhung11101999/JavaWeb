@@ -24,6 +24,8 @@
 				</a></li>
 				<li><a href="${pageContext.servletContext.contextPath}/table"> <i class="fas fa-table"></i>Tables
 				</a></li>
+				<li><a href="${pageContext.servletContext.contextPath}/table2"> <i class="fas fa-table"></i>Tables2
+				</a></li>
 				<li><a href="${pageContext.servletContext.contextPath}/forms"> <i class="far fa-check-square"></i>Forms
 				</a></li>
 				<li><a href="calendar.html"> <i class="fas fa-calendar-alt"></i>Calendar
