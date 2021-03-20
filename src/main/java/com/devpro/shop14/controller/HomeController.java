@@ -124,8 +124,8 @@ public class HomeController {
 		String searchText = request.getParameter("searchText");
 		ProductSearch productSearch = new ProductSearch();
 		
+		productSearch.setSearchText(searchText);
 		List<Product> products = productService.search(productSearch);
-		System.out.println("size of product: " + products.size());
 		for(Product temp : products) {
 			System.out.println("cate name : " + temp.getCategories().getName());
 		}
