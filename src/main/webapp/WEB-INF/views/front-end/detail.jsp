@@ -41,7 +41,7 @@
 					</fieldset>
 				</div>
 				<div class="rightsp">
-					<div>Giày Thể Thao XSPORT Adi.das Yeezy boost sesame</div>
+					<div>${product.title}</div>
 					<div class="right-contentsp">
 						<div class="right1sp">
 							<div>
@@ -92,7 +92,7 @@
 						</div>
 					</div>
 					<div class="right-ghsp">
-						<button>Thêm vào giỏ hàng</button>
+						<button onclick="Cart.saveCartItem(${product.id},1)">Thêm vào giỏ hàng</button>
 					</div>
 				</div>
 			</div>
