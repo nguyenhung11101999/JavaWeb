@@ -17,6 +17,7 @@ import com.devpro.shop14.dto.ProductSearch;
 import com.devpro.shop14.entities.Product;
 import com.devpro.shop14.repository.CategoryRepository;
 import com.devpro.shop14.repository.ProductRepository;
+import com.devpro.shop14.repository.UserRepository;
 import com.devpro.shop14.service.ProductService;
 
 
@@ -41,6 +42,7 @@ public class HomeController {
 	@Autowired
 	private ProductService productService;
 	
+	
 	@RequestMapping(value = { "/","/home", "/index", "/trangchu" }, method = RequestMethod.GET)
 	public String index(final ModelMap model, final HttpServletRequest request, final HttpServletResponse response)
 			throws Exception {
@@ -51,6 +53,7 @@ public class HomeController {
 		List<Product> products = productService.search(productSearch);
 		model.addAttribute("products",products);
 		model.addAttribute("productSearch", productSearch);
+		
 //		System.out.println("product image src : " + productRepository.findAll().get(4).getAvatar());
 		return "front-end/index";
 

@@ -110,22 +110,19 @@
 				</div>
 				<div class="col mb-2">
 					<div class="row">
-						<div class="col-sm-12  col-md-6">
-							<button class="btn btn-block btn-light">Continue
-								Shopping</button>
-						</div>
-						<div class="col-sm-12 col-md-3 text-right">
+						
+						<div class="col-sm-12 col-md-3 text-left">
 							<button class="btn btn-lg btn-block btn-success text-uppercase"
 								type="submit">Checkout</button>
-						</div>
-						<div class="col-sm-12 col-md-3 text-right">
-							<a href="${base}/home"><button
-									class="btn btn-lg btn-block btn-warning text-uppercase">Back</button></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</form>
+		<div class="col-sm-12  col-md-6">
+							<a href="${base}/home"><button class="btn btn-block btn-light">Continue
+								Shopping</button></a>
+						</div>
 	</div>
 </body>
 </html>

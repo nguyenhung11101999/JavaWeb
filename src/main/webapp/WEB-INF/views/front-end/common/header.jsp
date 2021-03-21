@@ -20,6 +20,7 @@
 				<div class="banner-search1">
 					<input type="text" placeholder="Tìm giày hoặc nhẵn hiệu"
 						name="searchText">
+					
 				</div>
 			</form>
 			<div class="banner-search2">
