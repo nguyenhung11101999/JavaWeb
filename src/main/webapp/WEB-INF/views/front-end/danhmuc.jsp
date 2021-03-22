@@ -25,14 +25,14 @@
 			<div class="maindm">
 				<!-- nam -->
 				<div class="main-namdm" id="nam">
-					<div class="list-title-header">IPHONE</div>
+					<div class="list-title-header">${catename}</div>
 					<div>
 						<div>
 							<div class="main-contentdm">
 								<c:forEach items="${products}" var="products">
 									<div>
 										<a href="${pageContext.servletContext.contextPath}/detail"><img
-											src="${pageContext.servletContext.contextPath}/upload/${products.avatar}"></a>
+											src="${pageContext.servletContext.contextPath}/upload${products.avatar}"></a>
 										<div class="main-p">${products.title}</div>
 										<div class="main-p">${products.price}</div>
 										<div class="main-ul">

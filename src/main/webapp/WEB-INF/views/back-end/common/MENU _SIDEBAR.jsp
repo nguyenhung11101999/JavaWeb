@@ -10,7 +10,7 @@
 <!-- MENU SIDEBAR-->
 <aside class="menu-sidebar d-none d-lg-block">
 	<div class="logo">
-		<a href="#"> <img
+		<a href="${base}/home"> <img
 			src="${pageContext.servletContext.contextPath}/backend/images/icon/logo.png"
 			alt="Cool Admin" />
 		</a>

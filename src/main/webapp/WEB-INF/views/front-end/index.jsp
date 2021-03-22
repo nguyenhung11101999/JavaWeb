@@ -40,7 +40,7 @@
 									<div>
 										<a
 											href="${pageContext.servletContext.contextPath}/detail?id=${products.id}"><img
-											src="${pageContext.servletContext.contextPath}/upload/${products.avatar}"></a>
+											src="${pageContext.servletContext.contextPath}/upload${products.avatar}"></a>
 										<div class="main-p">${products.title}</div>
 										<div class="main-p">${products.price}</div>
 										<div class="main-ul">
@@ -59,7 +59,7 @@
 								<c:forEach items="${products}" var="products">
 									<div>
 										<a href="${pageContext.servletContext.contextPath}/detail"><img
-											src="${pageContext.servletContext.contextPath}/upload/${products.avatar}"></a>
+											src="${pageContext.servletContext.contextPath}/upload${products.avatar}"></a>
 										<div class="main-p">${products.title}</div>
 										<div class="main-p">${products.price}</div>
 										<div class="main-ul">
@@ -93,7 +93,7 @@
 									<c:forEach items="${products}" var="products">
 										<div>
 											<a href="${pageContext.servletContext.contextPath}/detail"><img
-												src="${pageContext.servletContext.contextPath}/upload/${products.avatar}"></a>
+												src="${pageContext.servletContext.contextPath}/upload${products.avatar}"></a>
 											<div class="main-p">${products.title}</div>
 											<div class="main-p">${products.price}</div>
 											<div class="main-ul">
@@ -115,7 +115,7 @@
 									<c:forEach items="${products}" var="products">
 										<div>
 											<a href="${pageContext.servletContext.contextPath}/detail"><img
-												src="${pageContext.servletContext.contextPath}/upload/${products.avatar}"></a>
+												src="${pageContext.servletContext.contextPath}/upload${products.avatar}"></a>
 											<div class="main-p">${products.title}</div>
 											<div class="main-p">${products.price}</div>
 											<div class="main-ul">

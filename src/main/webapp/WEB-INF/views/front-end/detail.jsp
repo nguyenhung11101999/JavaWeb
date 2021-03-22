@@ -22,7 +22,7 @@
 				<div class="leftsp">
 					<fieldset>
 						<div class="boxsp">
-							<img src="${base}/upload/${product.avatar}" id="imageMain">
+							<img src="${base}/upload${product.avatar}" id="imageMain">
 						</div>
 						<div class="subsp">
 							<ul>

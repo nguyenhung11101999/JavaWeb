@@ -13,7 +13,7 @@
 		<div class="left1-2dm">
 			<ul>
 				<c:forEach items = "${categories}" var="cate">
-					<li><a href="${pageContext.servletContext.contextPath}/listsanpham?seo=${cate.seo}">${cate.name}</a></li>
+					<li><a href="${pageContext.servletContext.contextPath}/listsanpham?seo=${cate.seo}&&name=${cate.name}">${cate.name}</a></li>
 					<!-- <li><a href="${pageContext.servletContext.contextPath}/dmnu">SAMSUNG</a></li>
 					<li><a href="#doi">SONY</a></li>
 					<li><a href="#adidas">NOKIA</a></li>

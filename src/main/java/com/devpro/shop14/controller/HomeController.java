@@ -179,6 +179,11 @@ public class HomeController {
 		//
 		List<Product> products = productService.search(productSearch);
 		model.addAttribute("products",products);
+		String name = request.getParameter("name");
+//		for(Product temp : products) {
+//			name = temp.getCategories().getName();
+//		}	
+		model.addAttribute("catename",name);
 		model.addAttribute("productSearch", productSearch);
 		model.addAttribute("categories",categoryRepository.findAll());
 		return "front-end/danhmuc";
