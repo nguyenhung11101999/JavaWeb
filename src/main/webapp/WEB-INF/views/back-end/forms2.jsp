@@ -53,7 +53,7 @@
 
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Name</label>
+													<label class=" form-control-label">Tên</label>
 												</div>
 												<div class="col-12 col-md-9">
 													<sf:input path="name" cssClass="form-control" />
@@ -61,7 +61,7 @@
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Description</label>
+													<label class=" form-control-label">Mô tả</label>
 												</div>
 												<div class="col-12 col-md-9">
 													<sf:input path="description" cssClass="form-control" />
@@ -69,7 +69,7 @@
 											</div>
 											<div class="card-footer">
 												<button type="submit" class="btn btn-primary btn-sm">
-													<i class="fa fa-dot-circle-o"></i> Submit
+													<i class="fa fa-dot-circle-o"></i> Thêm
 												</button>
 											</div>
 										</sf:form>

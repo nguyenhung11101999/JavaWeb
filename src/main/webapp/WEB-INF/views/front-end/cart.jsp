@@ -25,7 +25,7 @@
 
 	<section class="jumbotron text-center">
 		<div class="container">
-			<h1 class="jumbotron-heading">E-COMMERCE CART</h1>
+			<h1 class="jumbotron-heading">Giỏ Hàng</h1>
 		</div>
 	</section>
 
@@ -33,20 +33,20 @@
 		<form action="${base}/cart/paymnen" method="post">
 			<div class="row">
 				<div class="col">
-					<input type="text" class="form-control" placeholder="Email"
-						name="email">
+					<input type="text" class="form-control" placeholder="Sản phẩm"
+						name="Sản phẩm">
 				</div>
 				<div class="col">
-					<input type="text" class="form-control" placeholder="Telephone"
-						name="tel">
+					<input type="text" class="form-control" placeholder=""
+						name="">
 				</div>
 				<div class="col">
-					<input type="text" class="form-control" placeholder="Full name"
-						name="fullName">
+					<input type="text" class="form-control" placeholder="Số lượng"
+						name="Số lượng">
 				</div>
 				<div class="col">
-					<input type="text" class="form-control" placeholder="Address"
-						name="address">
+					<input type="text" class="form-control" placeholder="Giá"
+						name="Giá">
 				</div>
 			</div>
 
@@ -57,10 +57,10 @@
 							<thead>
 								<tr>
 									<th scope="col"></th>
-									<th scope="col">Product</th>
-									<th scope="col">Available</th>
-									<th scope="col" class="text-center">Quantity</th>
-									<th scope="col" class="text-right">Price</th>
+									<th scope="col">Sản phẩm</th>
+									<th scope="col">Số lượng</th>
+									<th scope="col" class="text-center"></th>
+									<th scope="col" class="text-right">Giá</th>
 									<th></th>
 								</tr>
 							</thead>
@@ -70,7 +70,7 @@
 										<td><img src="https://dummyimage.com/50x50/55595c/fff" />
 										</td>
 										<td>${item.productName}</td>
-										<td>In stock</td>
+<!-- 										<td>In stock</td> -->
 										<td><input class="form-control" type="text" value="1" />${item.quantity}</td>
 										<td class="text-right">${item.priceUnit}</td>
 										<td class="text-right"><button
@@ -80,30 +80,30 @@
 									</tr>
 								</c:forEach>
 
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>Sub-Total</td>
-									<td class="text-right">255,90 €</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>Shipping</td>
-									<td class="text-right">6,90 €</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td><strong>Total</strong></td>
-									<td class="text-right"><strong>346,90 €</strong></td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td>Sub-Total</td> -->
+<!-- 									<td class="text-right">255,90 €</td> -->
+<!-- 								</tr> -->
+<!-- 								<tr> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td>Shipping</td> -->
+<!-- 									<td class="text-right">6,90 €</td> -->
+<!-- 								</tr> -->
+<!-- 								<tr> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td></td> -->
+<!-- 									<td><strong>Total</strong></td> -->
+<!-- 									<td class="text-right"><strong>346,90 €</strong></td> -->
+<!-- 								</tr> -->
 							</tbody>
 						</table>
 					</div>
@@ -113,15 +113,14 @@
 
 						<div class="col-sm-12 col-md-3 text-left">
 							<button class="btn btn-lg btn-block btn-success text-uppercase"
-								type="submit">Checkout</button>
+								type="submit">Thanh Toán</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</form>
 		<div class="col-sm-12  col-md-3">
-			<a href="${base}/home"><button class="btn btn-block btn-warning">Continue
-					Shopping</button></a>
+			<a href="${base}/home"><button class="btn btn-block btn-warning">Quay lại trang mua hàng</button></a>
 		</div>
 	</div>
 </body>

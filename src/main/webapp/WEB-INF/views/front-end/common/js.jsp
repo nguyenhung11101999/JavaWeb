@@ -72,15 +72,15 @@
 					key--;
 				});
 			});
-			// setInterval(function() {
-			// 	$("#imgSlide").fadeOut(function() {
-			// 		$("#imgSlide").attr("src",slide[key]);
-			// 		$("#imgSlide").fadeIn();
-			// 		key++;
-			// 		if(key == slide.length)
-			// 			key = 0;
-			// 	});
-			// },3000);
+			setInterval(function() {
+			 	$("#imgSlide").fadeOut(function() {
+			 		$("#imgSlide").attr("src",slide[key]);
+			 		$("#imgSlide").fadeIn();
+			 		key++;
+			 		if(key == slide.length)
+			 			key = 0;
+			 	});
+			 },3000);
 		});
 	</script>
 	<script src="${base}/js/cart.js"></script>

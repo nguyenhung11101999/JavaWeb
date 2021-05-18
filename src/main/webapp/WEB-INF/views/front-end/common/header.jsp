@@ -18,7 +18,7 @@
 			<form action="${pageContext.servletContext.contextPath}/searchAll"
 				method="post">
 				<div class="banner-search1">
-					<input type="text" placeholder="Tìm giày hoặc nhẵn hiệu"
+					<input type="text" placeholder="Nhập tên điện thoại"
 						name="searchText">
 					
 				</div>

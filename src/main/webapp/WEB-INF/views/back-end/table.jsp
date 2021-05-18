@@ -46,7 +46,7 @@
 					<div class="table-data__tool-right">
 						<a href="${pageContext.servletContext.contextPath}/forms"><button
 								class="au-btn au-btn-icon au-btn--green au-btn--small">
-								<i class="zmdi zmdi-plus"></i>add item
+								<i class="zmdi zmdi-plus"></i>Thêm sản phẩm
 							</button></a>
 					</div>
 				</div>
@@ -57,10 +57,10 @@
 								<th><label class="au-checkbox"> <input
 										type="checkbox"> <span class="au-checkmark"></span>
 								</label></th>
-								<th>title</th>
-								<th>price</th>
-								<th>short description</th>
-								<th>status</th>
+								<th>Tên</th>
+								<th>Giá</th>
+								<th>Mô tả</th>
+								<th>Trạng thái</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -73,7 +73,7 @@
 									<td>${product.title}</td>
 									<td><span class="block-email">${product.price}</span></td>
 									<td class="desc">${product.short_description}</td>
-									<td><span class="status--process">${product.status}</span></td>
+									<td><span class="status--process">Còn hàng</span></td>
 									<td>
 										<div class="table-data-feature">
 											<a

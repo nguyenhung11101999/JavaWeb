@@ -137,7 +137,7 @@
 									alt="John Doe" />
 							</div>
 							<div class="content">
-								<a class="js-acc-btn" href="#">john doe</a>
+								<a class="js-acc-btn" href="#">Nguyễn Mạnh Hùng</a>
 							</div>
 							<div class="account-dropdown js-dropdown">
 								<div class="info clearfix">

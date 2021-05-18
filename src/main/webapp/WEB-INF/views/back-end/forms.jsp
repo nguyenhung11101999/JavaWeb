@@ -56,7 +56,7 @@
 											
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Categories:</label>
+													<label class=" form-control-label">Danh mục:</label>
 												</div>
 												<div class="col-12 col-md-9">
 													<sf:select path="categories">
@@ -67,7 +67,7 @@
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Tile</label>
+													<label class=" form-control-label">Tên sản phẩm</label>
 												</div>
 												<div class="col-12 col-md-9">
 													<sf:input path="title" cssClass="form-control" />
@@ -75,7 +75,7 @@
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Price</label>
+													<label class=" form-control-label">Giá</label>
 												</div>
 												<div class="col-12 col-md-9">
 													<sf:input path="price" cssClass="form-control" />
@@ -83,8 +83,7 @@
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Short
-														description</label>
+													<label class=" form-control-label">Mô tả</label>
 												</div>
 												<div class="col-12 col-md-9">
 													<sf:textarea path="short_description"
@@ -93,8 +92,7 @@
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Detail
-														description</label>
+													<label class=" form-control-label">Thông tin sản phẩm</label>
 												</div>
 												<div class="col-12 col-md-9">
 													<sf:textarea path="detail_description"
@@ -103,7 +101,7 @@
 											</div>
 											<div class="row form-group">
 												<div class="col col-md-3">
-													<label class=" form-control-label">Image</label>
+													<label class=" form-control-label">Hình ảnh</label>
 												</div>
 												<div class="col-12 col-md-9">
 													<input type="file" class="form-control-file"
@@ -112,7 +110,7 @@
 											</div>
 											<div class="card-footer">
 												<button type="submit" class="btn btn-primary btn-sm">
-													<i class="fa fa-dot-circle-o"></i> Submit
+													<i class="fa fa-dot-circle-o"></i> Thêm
 												</button>
 											</div>
 										</sf:form>

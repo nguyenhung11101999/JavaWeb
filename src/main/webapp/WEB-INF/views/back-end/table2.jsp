@@ -41,12 +41,12 @@
 			<!-- content -->
 			<div class="main-content">
 				<!-- DATA TABLE -->
-				<h3 class="title-5 m-b-35">Danh sách sản phẩm</h3>
+				<h3 class="title-5 m-b-35">Danh mục sản phẩm</h3>
 				<div class="table-data__tool">
 					<div class="table-data__tool-right">
 						<a href="${base}/forms2"><button
 								class="au-btn au-btn-icon au-btn--green au-btn--small">
-								<i class="zmdi zmdi-plus"></i>add item
+								<i class="zmdi zmdi-plus"></i>Thêm danh mục
 							</button></a>
 					</div>
 				</div>
@@ -57,10 +57,10 @@
 								<th><label class="au-checkbox"> <input
 										type="checkbox"> <span class="au-checkmark"></span>
 								</label></th>
-								<th>title</th>
-								<th>price</th>
-								<th>short description</th>
-								<th>status</th>
+								<th>Mã</th>
+								<th>Tên</th>
+								<th>Mô tả</th>
+								<th>Trạng thái</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -73,7 +73,7 @@
 									<td>${cate.id}</td>
 									<td><span class="block-email">${cate.name}</span></td>
 									<td class="desc">${cate.description}</td>
-									<td><span class="status--process">${cate.seo}</span></td>
+									<td><span class="status--process">Có sản phẩm</span></td>
 									<td>
 										<div class="table-data-feature">
 											<a

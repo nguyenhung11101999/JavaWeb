@@ -139,7 +139,7 @@ public class HomeController {
 		productSearch.setSearchText(searchText);
 		List<Product> products = productService.search(productSearch);
 		model.addAttribute("products",products);
-		
+		System.out.println("check");
 		model.addAttribute("categories",categoryRepository.findAll());
 		return "front-end/danhmuc";
 		

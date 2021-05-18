@@ -30,11 +30,11 @@
 							<div class="main-content">
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -42,11 +42,11 @@
 								</div>
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -54,11 +54,11 @@
 								</div>
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -66,11 +66,11 @@
 								</div>
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -78,11 +78,11 @@
 								</div>
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -92,11 +92,11 @@
 							<div class="main-content">
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -104,11 +104,11 @@
 								</div>
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -116,11 +116,11 @@
 								</div>
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -128,11 +128,11 @@
 								</div>
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>
@@ -140,11 +140,11 @@
 								</div>
 								<div>
 									<img src="images/sp.jpg">
-									<div class="main-p">Doctor Martens</div>
+									<div class="main-p">Điện thoại IPhone 12</div>
 									<div class="main-p">1.200.000</div>
 									<div class="main-ul">
 										<ul>
-											<li><a href="#">Mua hàng</a></li>
+											<li><a href="#">Mua</a></li>
 											<li><a href="#">Đánh giá</a></li>
 											<li><a href="${pageContext.servletContext.contextPath}/detail" target="_blanh">Chi tiết</a></li>
 										</ul>

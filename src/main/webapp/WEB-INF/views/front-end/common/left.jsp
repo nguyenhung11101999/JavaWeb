@@ -16,7 +16,7 @@
 					<img src="images/left.jpg">
 				</div>
 				<div>
-					<a href="#">Dr. Martens đã được yêu thích và trở thành</a>
+					<a href="#">Cửa hàng TH là hệ thống các cửa hàng điện thoại số 1 VN</a>
 				</div>
 			</div>
 			<div class="left1-body-1">
@@ -24,7 +24,7 @@
 					<img src="images/left.jpg">
 				</div>
 				<div>
-					<a href="#">Dr. Martens đã được yêu thích và trở thành</a>
+					<a href="#">Cửa hàng TH là hệ thống các cửa hàng điện thoại số 1 VN</a>
 				</div>
 			</div>
 			<div class="left1-body-1">
@@ -32,7 +32,7 @@
 					<img src="images/left.jpg">
 				</div>
 				<div>
-					<a href="#">Dr. Martens đã được yêu thích và trở thành</a>
+					<a href="#">Cửa hàng TH là hệ thống các cửa hàng điện thoại số 1 VN</a>
 				</div>
 			</div>
 			<div class="left1-body-1">
@@ -40,7 +40,7 @@
 					<img src="images/left.jpg">
 				</div>
 				<div>
-					<a href="#">Dr. Martens đã được yêu thích và trở thành</a>
+					<a href="#">Cửa hàng TH là hệ thống các cửa hàng điện thoại số 1 VN</a>
 				</div>
 			</div>
 			<div class="left1-body-1">
@@ -48,7 +48,7 @@
 					<img src="images/left.jpg">
 				</div>
 				<div>
-					<a href="#">Dr. Martens đã được yêu thích và trở thành</a>
+					<a href="#">Cửa hàng TH là hệ thống các cửa hàng điện thoại số 1 VN</a>
 				</div>
 			</div>
 		</div>

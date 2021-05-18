@@ -40,7 +40,7 @@
 												<li><a href="#">Mua hàng</a></li>
 												<li><a href="#">Đánh giá</a></li>
 												<li><a
-													href="${pageContext.servletContext.contextPath}/detail"
+													href="${pageContext.servletContext.contextPath}/detail?id=${products.id}"
 													target="_blanh">Chi tiết</a></li>
 											</ul>
 										</div>

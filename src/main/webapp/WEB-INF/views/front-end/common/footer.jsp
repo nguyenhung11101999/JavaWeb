@@ -53,23 +53,23 @@
 		</div>
 	</div>
 	<div class="f2">
-		<div>SHOP THỜI TRANG NGUYỄN HÙNG</div>
+		<div>Cửa hàng điện thoại TH</div>
 		<div class="f2-2">
-			<div>
-				<ul>
-					<li>Social Sciences Publishing House</li>
-					<li>36 Hàng Chuối - Hai Bà Trưng - Hà Nội</li>
-					<li>Tel: 04.39719073 - Fax: 04.39719071 - Email: NMH@gmail.com</li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li>CHI NHÁNH HỒ CHÍ MINH</li>
-					<li>57 Sương Nguyệt Ánh - Phường Bến Thành - Quận I - TP Hồ
-						Chí Minh</li>
-					<li>Tel: 08.38394948 - Fax: 08.38394948</li>
-				</ul>
-			</div>
+<!-- 			<div> -->
+<!-- 				<ul> -->
+<!-- 					<li>Social Sciences Publishing House</li> -->
+<!-- 					<li>36 Hàng Chuối - Hai Bà Trưng - Hà Nội</li> -->
+<!-- 					<li>Tel: 04.39719073 - Fax: 04.39719071 - Email: NMH@gmail.com</li> -->
+<!-- 				</ul> -->
+<!-- 			</div> -->
+<!-- 			<div> -->
+<!-- 				<ul> -->
+<!-- 					<li>CHI NHÁNH HỒ CHÍ MINH</li> -->
+<!-- 					<li>57 Sương Nguyệt Ánh - Phường Bến Thành - Quận I - TP Hồ -->
+<!-- 						Chí Minh</li> -->
+<!-- 					<li>Tel: 08.38394948 - Fax: 08.38394948</li> -->
+<!-- 				</ul> -->
+<!-- 			</div> -->
 		</div>
 	</div>
 </footer>

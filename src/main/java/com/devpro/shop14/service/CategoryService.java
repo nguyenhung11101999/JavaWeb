@@ -28,7 +28,7 @@ public class CategoryService {
 			categories.setSeo(Utilities.seo(categories.getName().toLowerCase()) + "-" + System.currentTimeMillis());
 			System.out.println("seo : " + categories.getSeo());
 			categoriesRepository.save(categories);
-
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;

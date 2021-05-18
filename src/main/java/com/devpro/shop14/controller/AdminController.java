@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /*import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;*/
 
+import com.devpro.shop14.Utilities;
 import com.devpro.shop14.entities.Categories;
 import com.devpro.shop14.entities.Product;
 import com.devpro.shop14.repository.CategoryRepository;

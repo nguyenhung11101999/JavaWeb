@@ -53,30 +53,30 @@
 								<div>Phong cách:</div>
 							</div>
 							<div>
-								<div>Adidas</div>
+								<div>IPHONE</div>
 								<div>${product.price} VNĐ</div>
 								<div>Nam</div>
 								<div>Mỹ</div>
-								<div>1970</div>
+								<div>2021</div>
 								<div>Đơn giản</div>
 							</div>
 						</div>
 						<div class="right2sp">
 							<div>
 								<fieldset>
-									<legend>Kích cỡ</legend>
-									<label>34</label> <input type="radio" name="size" value="35">
-									<label>35</label> <input type="radio" name="size" value="35">
-									<label>36</label> <input type="radio" name="size" value="36">
-									<label>37</label> <input type="radio" name="size" value="37">
-									<label>38</label> <input type="radio" name="size" value="38">
-									<label>39</label> <input type="radio" name="size" value="39">
-									<label>40</label> <input type="radio" name="size" value="40">
-									<label>41</label> <input type="radio" name="size" value="41">
-									<label>42</label> <input type="radio" name="size" value="42">
-									<label>43</label> <input type="radio" name="size" value="43">
-									<label>44</label> <input type="radio" name="size" value="44">
-									<label>45</label> <input type="radio" name="size" value="44">
+<!-- 									<legend>Kích cỡ</legend> -->
+<!-- 									<label>34</label> <input type="radio" name="size" value="35"> -->
+<!-- 									<label>35</label> <input type="radio" name="size" value="35"> -->
+<!-- 									<label>36</label> <input type="radio" name="size" value="36"> -->
+<!-- 									<label>37</label> <input type="radio" name="size" value="37"> -->
+<!-- 									<label>38</label> <input type="radio" name="size" value="38"> -->
+<!-- 									<label>39</label> <input type="radio" name="size" value="39"> -->
+<!-- 									<label>40</label> <input type="radio" name="size" value="40"> -->
+<!-- 									<label>41</label> <input type="radio" name="size" value="41"> -->
+<!-- 									<label>42</label> <input type="radio" name="size" value="42"> -->
+<!-- 									<label>43</label> <input type="radio" name="size" value="43"> -->
+<!-- 									<label>44</label> <input type="radio" name="size" value="44"> -->
+<!-- 									<label>45</label> <input type="radio" name="size" value="44"> -->
 								</fieldset>
 							</div>
 							<div>
